@@ -1,31 +1,61 @@
 ---
+import { Icon } from "astro-icon/components";
 import Card from "./Card/index.astro";
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
-  <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
-      Hi, I'm Gianmarco, a front-end software developer from Italy.
-      <br />
-      My primary tools of choice includes:
-      <ul class="list-disc list-inside">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Solidjs</li>
-        <li>Astro</li>
-        <li>svelte</li>
-        <li>Nodejs</li>
-      </ul>
-    </p>
-    <p class="text-sm font-light">
-      Beyond coding, I'm passionate about design, illustration, animation and 3D modelling and traveling.
-      An unusual hobby of mine is collecting vintage passports, they're
-      interesting pieces of history to me.
-    </p>
-    <p class="text-sm font-light">
-      While I have some preferred tools, I always choose the best one for the
-      job, even if it's not on my usual list. My goal is to find the right
-      solution for each project.
-    </p>
+  <div class="flex flex-col h-full">
+    <div class="flex flex-col gap-2">
+      <p class="text-sm font-light">
+        Hi, I'm Aidan, a full-stack software developer from Tulsa.
+        <br />
+        My favorite tools right now include:
+        <ul class="list-disc list-inside">
+          <li class="flex items-center">
+            <Icon name="logos:react" class="h-4 w-4 rounded-sm mr-2" />
+            React.js
+          </li>
+          <li class="flex items-center">
+            <Icon name="tabler:brand-astro" class="h-4 w-4 rounded-sm mr-2" />
+            Astro.js
+          </li>
+          <li class="flex items-center">
+            <Icon name="logos:redwoodjs" class="h-4 w-4 rounded-sm mr-2" />
+            RedwoodJS
+          </li>
+          <li class="flex items-center">
+            <Icon name="logos:typescript-icon" class="h-4 w-4 rounded-sm mr-2" />
+            Typescript
+          </li>
+          <li class="flex items-center">
+            <Icon name="logos:javascript" class="h-4 w-4 rounded-sm mr-2" />
+            Javascript
+          </li>
+          <li class="flex items-center">
+            <Icon name="devicon:tailwindcss" class="h-4 w-4 rounded-sm mr-2" />
+            TailwindCSS
+          </li>
+        </ul>
+      </p>
+      <p class="text-sm font-light">
+        Beyond coding, I'm passionate about 
+        <span class="whitespace-nowrap">🎮 video games</span>, 
+        <span class="whitespace-nowrap">🏍️ motorcycles</span>, and 
+        <span class="whitespace-nowrap">📷 photography</span>.
+      </p>
+      <p class="text-sm font-light">
+        While I have some preferred tools, I always choose the best one for the
+        job, even if it's not on my usual list. My goal is to find the right
+        solution for each project.
+      </p>
+    </div>
+    <div class="grow flex justify-end flex-col mb-6">
+      <h2 class="text-xl font-bold m-0 z-20">Education</h2>
+      <div class="flex space-x-1 items-center">
+        <img class="h-4" src="/nucampLogo.png" />
+        <p class="m-0 font-light text-base">Nucamp Bootcamp</p>
+      </div>
+      <p class="m-0 font-light italic text-white/60 text-base">Mar. 2023 - Feb. 2024</p>
+    </div>
   </div>
 </Card>
