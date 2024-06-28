@@ -1,23 +1,55 @@
 ---
+import { Icon } from "astro-icon/components";
 import { formatDate } from "../../lib/helpers";
 
 interface Props {
   title: string;
   date: Date;
   url: string;
+  languages: string[];
 }
 
-const { title, date, url } = Astro.props;
+const { title, date, url, languages } = Astro.props;
+
+function LangIcon(language: string) {
+  switch (language) {
+    case "Astro":
+      return "tabler:brand-astro";
+    case "JavaScript":
+      return "logos:javascript";
+    case "TypeScript":
+      return "logos:typescript-icon";
+    case "Tailwind":
+      return "devicon:tailwindcss";
+    case "Next":
+      return "devicon:nextjs";
+    case "React":
+      return "logos:react";
+    case "Redwood":
+      return "logos:redwoodjs";
+    // case "Python":
+    //   return "devicon:python";
+    // case "Prisma":
+    //   return "devicon:prisma";
+    // case "GraphQL":
+    //   return "devicon:graphql";
+  }
+}
 ---
 
 <li class="w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-2">
   <a
     class="text-sm md:text-base decoration-none flex justify-between"
-    href={`/blog/${url}`}
+    href={`/projects/${url}`}
   >
-    <p class="inline-block whitespace-nowrap">
+  <div class="flex flex-row space-x-2">
+    <p class="inline-block whitespace-nowrap ">
       {title}
     </p>
+    {languages.map((language) => (
+      <span class="hover:bg-red-500/75 p-0.5 m-0.5 rounded-sm">{<Icon name={LangIcon(language)} class="h-4 w-4 rounded-sm" />}</span>
+    ))}
+  </div>
     <time
       class="text-right tabular-nums"
       datetime={date.toISOString()}
