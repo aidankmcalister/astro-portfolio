@@ -1,19 +1,13 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
-title: "Hello, World"
-description: "this is a post example"
+title: "GigStack"
+# description: "this is a post example"
 pubDate: 2023-01-21
-category: "intro"
+# category: "intro"
 languages: ["Tailwind", "Astro"]
 ---
 
-# Hi there!
+[Github](https://musician-booking-app-web.onrender.com/) [Website](https://github.com/aidankmcalister/GigStack)
+<br/><br/>
 
-This Markdown file creates a page at `your-domain.com/project1/`
-
-It probably isn't styled much, but Markdown does support:
-
-- **bold** and _italics._
-- lists
-- [links](https://astro.build)
-- and more!
+**Gigstack** is a dynamic gig platform built with RedwoodJS, offering users seamless gig posting and attending. Utilizes Prisma for CRUD operations and RedwoodJS's local authentication. Allows sorting by date/instruments for optimal user experience.
