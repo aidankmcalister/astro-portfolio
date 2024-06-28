@@ -1,7 +1,7 @@
 export const LINKS = {
   github: "https://github.com/aidankmcalister",
   linkedin: "https://www.linkedin.com/in/aidan-mcalister-2454102a0/",
-  // medium: "https://ladvace.medium.com/",
+  twitter: "https://ladvace.medium.com/",
   // discord: "https://discordapp.com/users/163300027618295808",
   // dribble: "https://dribbble.com/Ladvace_Jace",
 };
