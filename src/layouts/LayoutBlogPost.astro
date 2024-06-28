@@ -8,6 +8,9 @@ type Props = MarkdownLayoutProps<{
   description: string;
   pubDate: string;
   minutesRead: string;
+  languages: string[];
+  github: string;
+  website: string;
 }>;
 
 const { slug } = Astro.params;
@@ -31,7 +34,11 @@ const { frontmatter } = Astro.props;
       <h1 class="text-5xl font-semibold">{frontmatter.title}</h1>
       <div class="flex justify-between pt-4 text-gray-500 text-sm">
         <p>{formatDate(new Date(frontmatter.pubDate))}</p>
-        <p>{frontmatter.minutesRead}</p>
+        <!-- <p>{frontmatter.minutesRead}</p> -->
+         <div class="space-x-3">
+          <a class="text-red-500 hover:text-red-800 hover:no-underline" target="_blank" href={frontmatter.github}>Github</a>
+          <a class="text-red-500 hover:text-red-800 hover:no-underline" target="_blank" href={frontmatter.website}>Website</a>
+         </div>
       </div>
     </div>
     <article class="prose prose-p:text-red-500 prose-slate prose-invert">
