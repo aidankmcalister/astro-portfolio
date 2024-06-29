@@ -8,9 +8,10 @@ interface Props {
   date: Date;
   url: string;
   languages: string[];
+  type: string;
 }
 
-const { title, date, url, languages } = Astro.props;
+const { title, date, url, languages, type } = Astro.props;
 
 function LangIcon(language: string) {
   switch (language) {
@@ -47,20 +48,15 @@ function LangIcon(language: string) {
     <p class="inline-block whitespace-nowrap ">
       {title}
     </p>
-    <span class="ml-2">
-      {languages.map((language) => (
-          <TooltipHover language={language} client:visible>
-            <span class="hover:bg-red-500 p-0.5 m-0.5 rounded-sm w-5 h-5 flex items-center justify-center">{<Icon name={LangIcon(language)} class="h-4 w-4 rounded-sm" />}</span>
-          </TooltipHover>
-      ))}
-    </span>
+    <p class="text-neutral-400 mx-2">--</p>
+    <p class="text-neutral-400">{type}</p>
   </div>
-    <time
-      class="text-right tabular-nums"
-      datetime={date.toISOString()}
-      data-date={date.toISOString()}
-    >
-      {formatDate(date)}
-    </time>
+  <span class="ml-2">
+    {languages.map((language) => (
+        <TooltipHover language={language} client:visible>
+          <span class="hover:bg-red-500 p-0.5 m-0.5 rounded-sm w-5 h-5 flex items-center justify-center">{<Icon name={LangIcon(language)} class="h-4 w-4 rounded-sm" />}</span>
+        </TooltipHover>
+    ))}
+  </span>
   </a>
 </li>
