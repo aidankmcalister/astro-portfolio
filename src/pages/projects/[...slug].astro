@@ -15,13 +15,13 @@ if (slug === undefined) {
   throw new Error("slug is missing");
 }
 
-const posts = (await getCollection("projects")).sort(
+const projects = (await getCollection("projects")).sort(
   (projectEntryA, projectEntryB) =>
     (projectEntryB.data.pubDate || new Date()).getTime() -
     (projectEntryA.data.pubDate || new Date()).getTime()
 );
 
-const entry = posts.find((entry) => entry.slug === slug);
+const entry = projects.find((entry) => entry.slug === slug);
 if (entry === undefined) {
   return Astro.redirect("/404");
 }
