@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
 title: "My Portfolio"
-pubDate: 2023-01-21
+pubDate: "2024"
 github: "https://github.com/aidankmcalister/astro-portfolio"
 website: "https://aidanmcalister.com/"
 languages: ["Tailwind", "Astro", "TypeScript"]

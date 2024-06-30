@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
 title: "GigStack"
-pubDate: 2023-01-21
+pubDate: "2024"
 github: "https://github.com/aidankmcalister/GigStack"
 website: "https://musician-booking-app-web.onrender.com/"
 languages: ["Tailwind", "Redwood", "TypeScript", "Prisma", "GraphQL"]

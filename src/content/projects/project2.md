@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
 title: "WhereToWatch"
-pubDate: 2023-01-21
+pubDate: "2023"
 github: "https://github.com/aidankmcalister/where-to-watch"
 website: "https://www.wheretowatch.fyi"
 languages: ["Tailwind", "React", "JavaScript"]

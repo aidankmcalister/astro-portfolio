@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
 title: "My Old Portfolio"
+pubDate: "2024"
 github: "https://github.com/aidankmcalister/portfolio-revamped"
 website: "https://aidanmcalister-former.netlify.app"
 languages: ["Tailwind", "Next", "TypeScript"]

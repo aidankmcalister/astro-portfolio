@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/LayoutBlogPost.astro
 title: "WhatTodo"
-pubDate: 2023-01-21
+pubDate: "2024"
 github: "https://github.com/aidankmcalister/WhatTodo"
 website: "https://what-todo-akm.vercel.app/"
 languages: ["Tailwind", "Redwood", "TypeScript", "Prisma", "GraphQL"]
