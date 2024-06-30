@@ -21,63 +21,63 @@ const image =
     ? `${Astro.url.origin}/globe_preview.webp"`
     : `${Astro.url.origin}/og-image.png`;
 
-const schema =
-  page !== "blog"
-    ? {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        name: "Aidan",
-        url: "https://gianmarco.xyz",
-        sameAs: [
-          "https://www.linkedin.com/in/gianmarco-cavallo",
-          "https://github.com/Ladvace",
-        ],
-        image: "https://gianmarco.xyz/og-image.png",
-        jobTitle: "Freelance Frontend Developer",
-        worksFor: {
-          "@type": "Organization",
-          name: "Self-Employed",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Italy",
-            addressCountry: "IT",
-          },
-        },
-        nationality: {
-          "@type": "Country",
-          name: "Italy",
-        },
-      }
-    : {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `https://gianmarco.xyz/projects/${slug}`,
-        },
-        headline: frontmatter?.title || title,
-        description: frontmatter?.description || title,
-        image: "https://gianmarco.xyz/og-image.png", //TODO: dynamic
-        author: {
-          "@type": "Person",
-          name: "Gianmarco",
-          url: "https://gianmarco.xyz",
-          sameAs: [
-            "https://www.linkedin.com/in/gianmarco-cavallo",
-            "https://github.com/Ladvace",
-          ],
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Gianmarco",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://gianmarco.xyz/og-image.png",
-          },
-        },
-        datePublished: frontmatter?.pubDate || new Date().toISOString(),
-        dateModified: frontmatter?.pubDate || new Date().toISOString(),
-      };
+// const schema =
+  // page !== "blog"
+  //   ? {
+  //       "@context": "http://schema.org",
+  //       "@type": "Person",
+  //       name: "Aidan",
+  //       url: "https://gianmarco.xyz",
+  //       sameAs: [
+  //         "https://www.linkedin.com/in/gianmarco-cavallo",
+  //         "https://github.com/Ladvace",
+  //       ],
+  //       image: "https://gianmarco.xyz/og-image.png",
+  //       jobTitle: "Freelance Frontend Developer",
+  //       worksFor: {
+  //         "@type": "Organization",
+  //         name: "Self-Employed",
+  //         address: {
+  //           "@type": "PostalAddress",
+  //           addressLocality: "Italy",
+  //           addressCountry: "IT",
+  //         },
+  //       },
+  //       nationality: {
+  //         "@type": "Country",
+  //         name: "Italy",
+  //       },
+  //     }
+  //   : {
+  //       "@context": "http://schema.org",
+  //       "@type": "BlogPosting",
+  //       mainEntityOfPage: {
+  //         "@type": "WebPage",
+  //         "@id": `https://gianmarco.xyz/projects/${slug}`,
+  //       },
+  //       headline: frontmatter?.title || title,
+  //       description: frontmatter?.description || title,
+  //       image: "https://gianmarco.xyz/og-image.png", //TODO: dynamic
+  //       author: {
+  //         "@type": "Person",
+  //         name: "Gianmarco",
+  //         url: "https://gianmarco.xyz",
+  //         sameAs: [
+  //           "https://www.linkedin.com/in/gianmarco-cavallo",
+  //           "https://github.com/Ladvace",
+  //         ],
+  //       },
+  //       publisher: {
+  //         "@type": "Organization",
+  //         name: "Gianmarco",
+  //         logo: {
+  //           "@type": "ImageObject",
+  //           url: "https://gianmarco.xyz/og-image.png",
+  //         },
+  //       },
+  //       datePublished: frontmatter?.pubDate || new Date().toISOString(),
+  //       dateModified: frontmatter?.pubDate || new Date().toISOString(),
+  //     };
 ---
 
 <!doctype html>
@@ -109,7 +109,7 @@ const schema =
     />
 
     <link rel="preconnect" href="https://cdn.fontshare.com" />
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <!-- <script type="application/ld+json" set:html={JSON.stringify(schema)} /> -->
   </head>
   <body
     class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"
