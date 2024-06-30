@@ -10,3 +10,11 @@ type: "Full-Stack"
 ---
 
 **WhatTodo** is a streamlined Todo app powered by RedwoodJS, TailwindCSS, and Supabase. Users can effortlessly manage tasks with seamless Auth0 authentication, create, update, and delete todos, while enjoying a sleek dark mode interface. Deployed on Vercel for a smooth experience.
+
+**Key Features:**
+
+- **Auth0 Authentication**: Secure user login and registration.
+- **Task Management**: Create, update, and delete todos.
+- **Dark Mode**: Sleek and user-friendly dark mode interface.
+- **Responsive Design**: Optimized for various devices.
+- **Real-Time Sync**: Tasks sync seamlessly across devices.
