@@ -5,6 +5,8 @@ pubDate: 2023-01-21
 github: "https://github.com/aidankmcalister/astro-portfolio"
 website: "https://aidanmcalister.com/"
 languages: ["Tailwind", "Astro", "TypeScript"]
+# img: "/portfolioJune2024.png"
+img: "/portfolio.png"
 type: "Front-End"
 ---
 

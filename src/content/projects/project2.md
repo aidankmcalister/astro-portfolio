@@ -5,6 +5,7 @@ pubDate: 2023-01-21
 github: "https://github.com/aidankmcalister/where-to-watch"
 website: "https://www.wheretowatch.fyi"
 languages: ["Tailwind", "React", "JavaScript"]
+img: "/wheretowatch.jpg"
 type: "Front-End"
 ---
 

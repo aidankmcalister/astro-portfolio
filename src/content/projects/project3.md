@@ -5,6 +5,7 @@ pubDate: 2023-01-21
 github: "https://github.com/aidankmcalister/WhatTodo"
 website: "https://what-todo-akm.vercel.app/"
 languages: ["Tailwind", "Redwood", "TypeScript", "Prisma", "GraphQL"]
+img: "/whattodo.png"
 type: "Full-Stack"
 ---
 
