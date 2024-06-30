@@ -5,7 +5,7 @@ import TooltipHover from "../TooltipHover";
 
 interface Props {
   title: string;
-  date: Date;
+  date: string;
   url: string;
   languages: string[];
   type: string;
@@ -50,6 +50,8 @@ function LangIcon(language: string) {
     </p>
     <p class="text-neutral-400 mx-2">--</p>
     <p class="text-neutral-400">{type}</p>
+    <p class="text-neutral-400 mx-2">--</p>
+    <p class="text-neutral-400">{date}</p>
   </div>
   <span class="ml-2">
     {languages.map((language) => (

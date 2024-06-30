@@ -6,7 +6,7 @@ import BasicLayout from "./BasicLayout.astro";
 type Props = MarkdownLayoutProps<{
   title: string;
   description: string;
-  pubDate: string;
+  date: string;
   minutesRead: string;
   languages: string[];
   img: string;
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
     <div class="mb-6 mt-10 border-b-neutral-400 border-dashed border-b-1">
       <h1 class="text-5xl font-semibold">{frontmatter.title}</h1>
       <div class="flex justify-between pt-4 text-gray-500 text-sm">
-        <p>{formatDate(new Date(frontmatter.pubDate))}</p>
+        <p>{frontmatter.date}</p>
         <div class="space-x-3">
           <a class="text-red-500 hover:text-red-800 hover:no-underline" target="_blank" href={frontmatter.github}>Github</a>
           <a class="text-red-500 hover:text-red-800 hover:no-underline" target="_blank" href={frontmatter.website}>Website</a>

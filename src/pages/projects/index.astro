@@ -3,11 +3,17 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import PostRow from "../../components/Blog/PostRow.astro";
 
-const posts = (await getCollection("projects"))?.sort(
-  (projectEntryA, projectEntryB) =>
-    (projectEntryB.data.pubDate || new Date()).getTime() -
-    (projectEntryA.data.pubDate || new Date()).getTime()
-);
+const posts = (await getCollection("projects"))?.sort((projectEntryA, projectEntryB) => {
+  const dateA = new Date(projectEntryA.data.pubDate).getFullYear();
+  const dateB = new Date(projectEntryB.data.pubDate).getFullYear();
+
+  if (dateA !== dateB) {
+    return dateB - dateA; // Sort by year (descending)
+  }
+
+  // If years are the same, sort by the number of languages (descending)
+  return projectEntryB.data.languages.length - projectEntryA.data.languages.length;
+});
 ---
 
 <script>
@@ -37,7 +43,7 @@ const posts = (await getCollection("projects"))?.sort(
         posts?.map((post) => (
           <PostRow
             title={post.data.title || "No title"}
-            date={post.data.pubDate || new Date()}
+            date={post.data.pubDate}
             url={post.slug}
             languages={post.data.languages}
             type={post.data.type}
