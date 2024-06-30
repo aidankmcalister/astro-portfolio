@@ -41,6 +41,7 @@ const posts = (await getCollection("projects"))?.sort(
             url={post.slug}
             languages={post.data.languages}
             type={post.data.type}
+            img={post.data.img}
           />
         ))
       }
