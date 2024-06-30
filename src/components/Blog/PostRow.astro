@@ -39,7 +39,7 @@ function LangIcon(language: string) {
 }
 ---
 
-<li class="w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-2">
+<li class="w-full text-neutral-100 group hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-2">
   <a
     class="text-sm md:text-base decoration-none flex justify-between"
     href={`/projects/${url}`}
@@ -54,7 +54,9 @@ function LangIcon(language: string) {
   <span class="ml-2">
     {languages.map((language) => (
         <TooltipHover language={language} client:visible>
-          <span class="hover:bg-red-500 p-0.5 m-0.5 rounded-sm w-5 h-5 flex items-center justify-center">{<Icon name={LangIcon(language)} class="h-4 w-4 rounded-sm" />}</span>
+          <span class={`hover:bg-red-500 group-hover:opacity-70 p-0.5 m-0.5 rounded-sm w-5 h-5 flex items-center justify-center ${(language == "Astro" || language == "Prisma") ? "text-white" : ""} `}>
+            <Icon name={LangIcon(language)} class="h-4 w-4 rounded-sm" />
+          </span>
         </TooltipHover>
     ))}
   </span>
