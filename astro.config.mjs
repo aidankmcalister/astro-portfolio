@@ -8,23 +8,32 @@ import solidJs from "@astrojs/solid-js";
 import { remarkReadingTime } from "./src/lib/ remark-reading-time.mjs";
 import svelte from "@astrojs/svelte";
 import tunnel from "astro-tunnel";
-import vercel from "@astrojs/vercel/serverless";
-
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://gianmarco.xyz/",
-  integrations: [sitemap(), robotsTxt({
-    sitemap: ["https://gianmarco.xyz/sitemap-index.xml", "https://gianmarco.xyz/sitemap-0.xml"]
-  }), solidJs(), UnoCSS({
-    injectReset: true
-  }), icon(), svelte(), tunnel()],
+  integrations: [
+    sitemap(),
+    robotsTxt({
+      sitemap: [
+        "https://gianmarco.xyz/sitemap-index.xml",
+        "https://gianmarco.xyz/sitemap-0.xml",
+      ],
+    }),
+    solidJs(),
+    UnoCSS({
+      injectReset: true,
+    }),
+    icon(),
+    svelte(),
+    tunnel(),
+  ],
   markdown: {
-    remarkPlugins: [remarkReadingTime]
+    remarkPlugins: [remarkReadingTime],
   },
   output: "server",
   adapter: netlify(),
   vite: {
-    assetsInclude: "**/*.riv"
-  }
+    assetsInclude: "**/*.riv",
+  },
 });
