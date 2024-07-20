@@ -5,19 +5,24 @@ import Pulse from "./Pulse.astro";
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
   <div class="flex justify-between w-full items-start mb-2">
-    <div class="flex flex-col">
+    <div class="flex flex-row space-x-2 items-center justify-center">
       <h2>Now</h2>
-      <a href="https://sive.rs/nowff" target="_blank">
+      <a class="flex" href="https://sive.rs/nowff" target="_blank">
         <span class="text-xs text-gray-500 cursor-pointer">what's that ?</span>
       </a>
     </div>
     <Pulse />
   </div>
-  <p class="text-xs flex flex-wrap">
-    Currently working as a contractor for 
+  <div class="text-xs space-y-2">
     <span class="flex items-center space-x-1">
-      <img class="h-4" src="/elevateDigital.png" />
-      <a href="https://www.elevatedigital.io" target="_blank" class="text-red-500 hover:text-red-600">Elevate Digital Inc.</a>
+      <img class="h-4 w-4" src="/InnerArmor.png" />
+      <a href="https://www.forgeinnerarmor.com/" target="_blank" class="text-red-500 hover:text-red-600">Inner Armor</a>
+      <p class="italic">- Contractor</p>
     </span>
-  </p>
+    <span class="flex items-center space-x-1">
+      <img class="h-4 w-4" src="/elevateDigital.png" />
+      <a href="https://www.elevatedigital.io" target="_blank" class="text-red-500 hover:text-red-600">Elevate Digital Inc.</a>
+      <p class="italic">- Contractor</p>
+    </span>
+  </div>
 </Card>
