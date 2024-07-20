@@ -15,11 +15,12 @@ if (slug === undefined) {
   throw new Error("slug is missing");
 }
 
-const posts = (await getCollection("blog")).sort(
-  (blogEntryA, blogEntryB) =>
-    (blogEntryB.data.pubDate || new Date()).getTime() -
-    (blogEntryA.data.pubDate || new Date()).getTime()
-);
+const posts = (await getCollection("blog")).sort((blogEntryA, blogEntryB) => {
+  const dateA = blogEntryA.data.pubDate instanceof Date ? blogEntryA.data.pubDate : new Date();
+  const dateB = blogEntryB.data.pubDate instanceof Date ? blogEntryB.data.pubDate : new Date();
+  return dateB.getTime() - dateA.getTime();
+});
+
 
 const entry = posts.find((entry) => entry.slug === slug);
 if (entry === undefined) {
