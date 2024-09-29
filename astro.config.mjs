@@ -11,13 +11,13 @@ import tunnel from "astro-tunnel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://gianmarco.xyz/",
+  site: "https://aidanmcalister.com/",
   integrations: [
     sitemap(),
     robotsTxt({
       sitemap: [
-        "https://gianmarco.xyz/sitemap-index.xml",
-        "https://gianmarco.xyz/sitemap-0.xml",
+        "https://aidanmcalister.com/sitemap-index.xml",
+        "https://aidanmcalister.com/sitemap-0.xml",
       ],
     }),
     solidJs(),

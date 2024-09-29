@@ -15,7 +15,7 @@ if (slug === undefined) {
   throw new Error("slug is missing");
 }
 
-const projects = (await getCollection("blog")).sort((projectEntryA, projectEntryB) => {
+const projects = (await getCollection("projects")).sort((projectEntryA, projectEntryB) => {
   const dateA = projectEntryA.data.pubDate instanceof Date ? projectEntryA.data.pubDate : new Date();
   const dateB = projectEntryB.data.pubDate instanceof Date ? projectEntryB.data.pubDate : new Date();
   return dateB.getTime() - dateA.getTime();
