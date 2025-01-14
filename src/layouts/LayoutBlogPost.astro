@@ -43,9 +43,11 @@ const { frontmatter } = Astro.props;
     </div>
     <article class="prose prose-p:text-red-500 prose-slate prose-invert">
       <slot />
-      <a href={frontmatter.website} target="_blank">
-        <img class="mt-5 rounded-lg border-red-500/50 border hover:border-red-600/50" src={`/project-images/${frontmatter.img}`} alt={frontmatter.title} />
-      </a>
+      {frontmatter.img && (
+        <a href={frontmatter.website} target="_blank">
+          <img class="mt-5 rounded-lg border-red-500/50 border hover:border-red-600/50" src={`/project-images/${frontmatter.img}`} alt={frontmatter.title} />
+        </a>
+      )}
     </article>
   </main>
 </BasicLayout>
